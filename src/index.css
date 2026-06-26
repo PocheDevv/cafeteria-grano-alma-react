@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-coffee-50: #faf8f5;
+  --color-coffee-100: #f3ede2;
+  --color-coffee-200: #e7dac5;
+  --color-coffee-300: #d5be9f;
+  --color-coffee-400: #be9d74;
+  --color-coffee-500: #a98051;
+  --color-coffee-600: #93683f;
+  --color-coffee-700: #7b5231;
+  --color-coffee-800: #624027;
+  --color-coffee-900: #4a301e;
+  --color-coffee-950: #29190f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-coffee-50);
+  color: var(--color-stone-800);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-coffee-700);
+  color: white;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-coffee-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-coffee-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-500);
+}
+
+main {
+  width: 100%;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #7b5231;
+  color: white;
+  padding: 22px 72px !important;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #93683f;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-block;
+  color: white;
+  padding: 22px 72px !important;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.mensaje-exito {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #166534;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.8s ease;
+}
+
+.mensaje-exito.oculto {
+  opacity: 0;
+}
